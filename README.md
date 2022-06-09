@@ -3,7 +3,7 @@
 <!-- ABOUT THE PROJECT -->
 ## React Hardhat Boilerplate
 
-This is React & Hardhat boilerplate project designed for quick and easy decentralized applications development
+This is a React & Hardhat boilerplate project designed for quick and easy decentralized applications development
 
 <p align="center">
   <img alt="Dark" src="https://user-images.githubusercontent.com/83681204/172961326-d0d686c2-f9bd-40d6-9a63-e076defc6b73.png" width="100%">
@@ -13,10 +13,11 @@ This is React & Hardhat boilerplate project designed for quick and easy decentra
 
 * [Solidity](https://docs.soliditylang.org/)
 * [Hardhat](https://hardhat.org/getting-started/)
-* [React.js](https://reactjs.org/)
+* [React js](https://reactjs.org/)
 * [ethers.js](https://docs.ethers.io/v5/)
 * [web3modal](https://github.com/Web3Modal/web3modal)
 * [material ui](https://mui.com/getting-started/installation/)
+* [redux](https://redux.js.org)
 
 
 <details>
