@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+<div id="top"></div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- ABOUT THE PROJECT -->
+## React Hardhat Boilerplate
 
-## Available Scripts
+This is React & Hardhat boilerplate project designed for quick and easy decentralized applications development
 
-In the project directory, you can run:
+<p align="center">
+  <img alt="Dark" src="https://user-images.githubusercontent.com/83681204/172961326-d0d686c2-f9bd-40d6-9a63-e076defc6b73.png" width="100%">
+</p>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [Solidity](https://docs.soliditylang.org/)
+* [Hardhat](https://hardhat.org/getting-started/)
+* [React.js](https://reactjs.org/)
+* [ethers.js](https://docs.ethers.io/v5/)
+* [web3modal](https://github.com/Web3Modal/web3modal)
+* [material ui](https://mui.com/getting-started/installation/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+       <li><a href="#prerequisites">Prerequisites</a></li>
+       <li><a href="#project-structure">Project structure</a></li>
+       <li><a href="#initial-setup">Initial Setup</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-use">How to Use</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- GETTING STARTED -->
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Please install or have installed the following:
+* [nodejs](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/)
+* [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) Chrome extension installed in your browser
+* [Ganache](https://trufflesuite.com/ganache/) for local smart contracts deployement and testing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Project structure
 
-### `npm run eject`
+This a full stack web3 decentralized application boilerplate built using Hardhat/React js, so the project is devided into 2 main parts:
+<ul>
+ <li><b>Smart contract/backend side:</b></li>
+ Located in the hardhat folder, it contains the blockchain developement envirenment built using Hardhat, with all the smart contracts tests, deployement scripts and the plugins (etherscan, openzeppelin,...). 
+  <li><b>front-end side:</b></li>
+The code for the UI can be found in the src folder (as in all reactjs apps)
+</ul>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Initial Setup
+1. Clone the repository and install all the required packages by running:
+   ```sh
+   git clone https://github.com/Aymen1001/React-Hardhat-Boilerplate.git
+   cd React-Hardhat-Boilerplate
+   yarn
+   ```
+2. Start the ganache network and export the private key of the first account to the .env file in the hardhat folder, it will be used for deploying the contracts and you can also add Etherscan apikey for verifications:
+   ```sh
+    RINKEBY_ETHERSCAN_API_KEY="your etherscan api key"
+    RINKEBY_RPC_URL="https://eth-rinkeby.alchemyapi.io/v2/apiKey"
+    POLYGON_RPC_URL="Your polygon RPC url from alchemy or infura"
+    MUMBAI_RPC_URL="Your mumbai RPC url from alchemy or infura"
+    PRIVATE_KEY="ganahce-private-key"
+   ```
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- USAGE EXAMPLES -->
+## How to Use
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+After going through all the installation and setup steps, you'll need to deploy the smart contract to the ganache network by running: 
+   ```sh
+   cd hardhat
+   npx hardhat run scripts/deploy-script.js --network ganache
+   ```
+This will create a config.js file and an artifacts folder and transfer them to the src folder to enable the interaction between the contract and the UI
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you want to test the functionnalities of your contract, you can do it by running:
+   ```sh
+   npx hardhat test
+   ```
 
-## Learn More
+To start the app you have to go back to the nft-draw-minter folder and run the command:
+   ```sh
+   yarn start
+   ```
+   
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- Contact -->
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you have any question or problem running this project just contact me: aymenMir1001@gmail.com
 
-### Code Splitting
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+<!-- LICENSE -->
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#top">back to top</a>)</p>
