@@ -9,6 +9,7 @@ This is React & Hardhat boilerplate project designed for quick and easy decentra
   <img alt="Dark" src="https://user-images.githubusercontent.com/83681204/172961326-d0d686c2-f9bd-40d6-9a63-e076defc6b73.png" width="100%">
 </p>
 
+## Tech Stack :
 
 * [Solidity](https://docs.soliditylang.org/)
 * [Hardhat](https://hardhat.org/getting-started/)
