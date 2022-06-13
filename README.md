@@ -81,7 +81,7 @@ The code for the UI can be found in the src folder (as in all reactjs apps)
 After going through all the installation and setup steps, you can deploy your contract by following the same code used in deploy-script.js, you just need to change the contract name and provide your constructor's arguments, then by running the command below the contract will be deployed on your choosen network (and verified on Etherscan in case of real or testnets): 
    ```sh
    cd hardhat
-   npx hardhat run scripts/deploy-script.js --network <<network name>>
+   npx hardhat run scripts/deploy-script.js --network <<network-name>>
    ```
 This will also create a config.js file and an artifacts folder and transfer them to the src folder to enable the interaction between the contract and the UI
 
@@ -95,6 +95,10 @@ To start the app you have to run the command:
    cd React-Hardhat-Boilerplate
    yarn start
    ```
+In the utils folder you'll find some useful scripts used in the smart contracts development process, for the moment it contains:
+    <ul>
+     <li>verify.js : for performing programmtic contract verification on Etherscan</li>
+    </ul>
    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
