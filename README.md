@@ -65,7 +65,7 @@ The code for the UI can be found in the src folder (as in all reactjs apps)
    cd React-Hardhat-Boilerplate
    yarn
    ```
-2. Start the ganache network and export the private key of the first account to the .env file in the hardhat folder, it will be used for deploying the contracts and you can also add Etherscan apikey for verifications:
+2. Private key & Network Urls setup: in the hardhat folder you'll find a .env file, it's used to store all the sensible data/keys like your private key, RPC url for mainnet, rinkeby, kovan... (you get RPC url from services like Infura or Alchemy for free), you can also provide Etherscan api key to allow automatic contracts verifications :
    ```sh
     RINKEBY_ETHERSCAN_API_KEY="your etherscan api key"
     RINKEBY_RPC_URL="https://eth-rinkeby.alchemyapi.io/v2/apiKey"
@@ -78,20 +78,21 @@ The code for the UI can be found in the src folder (as in all reactjs apps)
 <!-- USAGE EXAMPLES -->
 ## How to Use
 
-After going through all the installation and setup steps, you'll need to deploy the smart contract to the ganache network by running: 
+After going through all the installation and setup steps, you can deploy your contract by following the same code used in deploy-script.js, you just need to change the contract name and provide your constructor's arguments, then by running the command below the contract will be deployed on your choosen network (and verified on Etherscan in case of real or testnets): 
    ```sh
    cd hardhat
-   npx hardhat run scripts/deploy-script.js --network ganache
+   npx hardhat run scripts/deploy-script.js --network <<network name>>
    ```
-This will create a config.js file and an artifacts folder and transfer them to the src folder to enable the interaction between the contract and the UI
+This will also create a config.js file and an artifacts folder and transfer them to the src folder to enable the interaction between the contract and the UI
 
-If you want to test the functionnalities of your contract, you can do it by running:
+If you want to test the functionnalities of your contract, you can write basic tests files in the test folder and again you can follow the same architecture used in the sample-test.js, then run the command:
    ```sh
    npx hardhat test
    ```
 
-To start the app you have to go back to the nft-draw-minter folder and run the command:
+To start the app you have to run the command:
    ```sh
+   cd React-Hardhat-Boilerplate
    yarn start
    ```
    
