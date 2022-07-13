@@ -53,19 +53,29 @@ Please install or have installed the following:
 This a full stack web3 decentralized application boilerplate built using Hardhat/React js, so the project is devided into 2 main parts:
 <ul>
  <li><b>Smart contract/backend side:</b></li>
- Located in the hardhat folder, it contains the blockchain developement envirenment built using Hardhat, with all the smart contracts tests, deployement scripts and the plugins (etherscan, openzeppelin,...). 
+ Located in the smart_contracts folder, it contains the blockchain developement envirenment built using Hardhat, with all the smart contracts tests, deployement scripts and the plugins (etherscan, openzeppelin,...). 
   <li><b>front-end side:</b></li>
-The code for the UI can be found in the src folder (as in all reactjs apps)
+The code for the UI can be found in the front-end folder, it's built with React JS and uses web3modal to connect with browser wallets liek metamask, walletconnect,... and it communicate with the contracts using ethers.js library.
 </ul>
 
 ### Initial Setup
-1. Clone the repository and install all the required packages by running:
+1. Clone the repository :
    ```sh
    git clone https://github.com/Aymen1001/React-Hardhat-Boilerplate.git
    cd React-Hardhat-Boilerplate
-   yarn
    ```
-2. Private key & Network Urls setup: in the hardhat folder you'll find a .env file, it's used to store all the sensible data/keys like your private key, RPC url for mainnet, rinkeby, kovan... (you get RPC url from services like Infura or Alchemy for free), you can also provide Etherscan api key to allow automatic contracts verifications :
+   And install all the required packages by running :
+   * for the backend : 
+      ```sh
+     cd smart_contracts
+     yarn
+     ```
+   * for the front-end : 
+      ```sh
+     cd front-end
+     yarn
+     ```
+2. Private key & Network Urls setup: in the smart_contracts folder you'll find a .env file, it's used to store all the sensible data/keys like your private key, RPC url for mainnet, rinkeby, kovan... (you get RPC url from services like Infura or Alchemy for free), you can also provide Etherscan api key to allow automatic contracts verifications :
    ```sh
     RINKEBY_ETHERSCAN_API_KEY="your etherscan api key"
     RINKEBY_RPC_URL="https://eth-rinkeby.alchemyapi.io/v2/apiKey"
@@ -80,7 +90,7 @@ The code for the UI can be found in the src folder (as in all reactjs apps)
 
 After going through all the installation and setup steps, you can deploy your contract by following the same code used in deploy-script.js, you just need to change the contract name and provide your constructor's arguments, then by running the command below the contract will be deployed on your choosen network (and verified on Etherscan in case of real or testnets): 
    ```sh
-   cd hardhat
+   cd smart_contracts
    npx hardhat run scripts/deploy-script.js --network <<network-name>>
    ```
 This will also create a config.js file and an artifacts folder and transfer them to the src folder to enable the interaction between the contract and the UI
@@ -92,7 +102,7 @@ If you want to test the functionnalities of your contract, you can write basic t
 
 To start the app you have to run the command:
    ```sh
-   cd React-Hardhat-Boilerplate
+   cd front-end
    yarn start
    ```
 In the utils folder you'll find some useful scripts used in the smart contracts development process, for the moment it contains:
