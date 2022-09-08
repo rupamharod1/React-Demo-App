@@ -61,7 +61,7 @@ The code for the UI can be found in the front-end folder, it's built with React 
 ### Initial Setup
 1. Clone the repository :
    ```sh
-   git clone https://github.com/Aymen1001/React-Hardhat-Boilerplate.git
+   git clone https://github.com/kaymen99/React-Hardhat-Boilerplate.git
    cd React-Hardhat-Boilerplate
    ```
    And install all the required packages by running :
