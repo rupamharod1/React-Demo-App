@@ -11,7 +11,7 @@ import networksMap from "../utils/networksMap.json";
 
 const Home = () => {
 
-    const data = useSelector((state) => state.blockchain.value)
+    const data = useSelector((state) => state.userData.value)
 
     const [loading, setLoading] = useState(false)
     const [greeting, setGreeting] = useState("")
