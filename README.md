@@ -6,7 +6,7 @@
 This is a React & Hardhat boilerplate project designed for quick and easy decentralized applications development (writing smart contracts, testing, deployements, Etherscan verifications, connecting with front end).
 
 <p align="center">
-  <img alt="Dark" src="https://user-images.githubusercontent.com/83681204/172961326-d0d686c2-f9bd-40d6-9a63-e076defc6b73.png" width="100%">
+  <img alt="Dark" src="https://github.com/kaymen99/React-Hardhat-Boilerplate/assets/83681204/12e2e902-130c-4b06-8269-9db146b3cebb" width="100%">
 </p>
 
 ## Tech Stack :
