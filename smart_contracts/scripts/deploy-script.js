@@ -17,10 +17,10 @@ async function main() {
   console.log("Greeter deployed to :", greeter.address);
   console.log("Network deployed to :", deployNetwork);
 
-  /* this code writes the contract addresses to a local */
-  /* file named config.js that we can use in the app */
+  /* transfer contracts addresses & ABIs to the front-end */
   if (fs.existsSync("../front-end/src")) {
-    fse.copySync(`./artifacts/contracts`, "../front-end/src/artifacts")
+    fs.rmSync("../src/artifacts", { recursive: true, force: true });
+    fse.copySync("./artifacts/contracts", "../front-end/src/artifacts");
     fs.writeFileSync('../front-end/src/utils/contracts-config.js', `
     export const contractAddress = "${greeter.address}"
     export const ownerAddress = "${greeter.signer.address}"
